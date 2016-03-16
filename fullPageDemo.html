@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <title></title>
+    <link href="jquery.fullPage.css" rel="stylesheet">
+    <link href="fullpage.css" rel="stylesheet">
+</head>
+<body>
+<!--<ul id="fullpageMenu" style="position: fixed;top: 0;">-->
+    <!--<li data-menuanchor="page1" class="active"><a href="#page1">1 section</a></li>-->
+    <!--<li data-menuanchor="page2"><a href="#page2">2 section</a></li>-->
+    <!--<li data-menuanchor="page3"><a href="#page3">3 section</a></li>-->
+    <!--<li data-menuanchor="page4"><a href="#page4">4 section</a></li>-->
+<!--</ul>-->
+<div id="header">
+    <div class="head">
+        <a href="#"><img src="img/logo.png"> </a>
+        <a href="#" class="headright"><img src="img/button.png"> </a>
+    </div>
+</div>
+<div id="fullpage">
+    <div class="section section1">
+        <div id="docs">
+            <h1>戴着它，就会爱上它。</h1>
+            <p>收取并即时回应各种通知，追踪每天的运动情况，动动嘴就能控制音乐播放，还能随时展开体能训练。有了 Apple Watch，只需轻抬手腕，各种重要信息和功能就尽在掌握。</p>
+        </div>
+    </div>
+    <div class="section section2">
+        <div class="fp-slide fp-slide1">
+            <div class="fp-slide1-c"><h1>iwatch手表</h1></div>
+            <div class="fp-slide1-i"><img src="img/technology_hero_large_2x.jpg"> </div>
+        </div>
+        <div class="fp-slide fp-slide2"></div>
+        <div class="fp-slide fp-slide3"></div>
+    </div>
+    <div class="section section3">
+        <div class="container">
+            <div class="row">
+                <div class="colum">
+                    <p class="images images1"><img src="img/sport_large_2x.jpg"> </p>
+                    <h2 class="fonts">通知</h2>
+                    <p class="fonts">Apple Watch 会轻点你的手腕，提醒你通过多种方式即时响应通知。</p>
+                </div>
+                <div class="colum">
+                    <p class="images images2"><img src="img/sport_large_2x.jpg"> </p>
+                    <h2 class="fonts">通知</h2>
+                    <p class="fonts">Apple Watch 会轻点你的手腕，提醒你通过多种方式即时响应通知。</p>
+                </div>
+                <div class="colum">
+                    <p class="images images3"><img src="img/sport_large_2x.jpg"> </p>
+                    <h2 class="fonts">通知</h2>
+                    <p class="fonts">Apple Watch 会轻点你的手腕，提醒你通过多种方式即时响应通知。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery-1.10.2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="jquery.fullPage.js"></script>
+<script src="move.min.js"></script>
+<script>
+    $(document).ready(function(){
+       $("#fullpage").fullpage({
+           anchors:['page1','page2','page3'],
+           navigation:true,
+           navigationTooltips:['第一页','第二页','第三页'],
+           slidesNavigation:true,
+           verticalCentered:false,
+           afterLoad: function(anchorLink, index){
+               var images3 = move('.images3')
+                       .rotate(360)
+                       .duration('1s');
+               var images2 = move('.images2')
+                       .rotate(360)
+                       .duration('1s')
+                       .then(images3);
+               if(index == 3){
+                   move('.images1')
+                           .rotate(360)
+                           .duration('1s')
+                           .then(images2)
+                           .end();
+               }
+               if(index==2)
+               {
+                   move('.fp-slide1-i')
+                           .y(-700)
+                           .duration('1s')
+                           .end();
+               }
+           },
+           fixedElements:'#header'
+           //autoScrolling:true,
+           //scrollBar:true
+//           menu:"#fullpageMenu"
+       });
+        move('#docs p')
+                .y(-750)
+                .duration('1s')
+                .end();
+    });
+</script>
+</body>
+</html>

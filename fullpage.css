@@ -1,0 +1,118 @@
+body{
+    font: 18px / 1.5 "Helvetica Neue",Helvetica,Arial,"Microsoft Yahei","Hiragino Sans GB","Heiti SC","WenQuanYi Micro Hei",sans-serif;
+    color: #ffffff;
+}
+.section1{
+    background: url("img/hero_sunset_large_2x.jpg") no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+}
+.section2{
+    background-color: #f2f2f2;
+    color: #000;
+}
+.section3{
+    background-color: #f2f2f2;
+    color: #000;
+}
+#docs{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 500px;
+    margin-left: -250px;
+    text-align: center;
+}
+#docs p{
+    margin-top: 800px;
+}
+#res{
+    position: absolute;
+    top: 20%;
+    text-align: center;
+}
+.container{
+    width: 90%;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    color: #000000;
+}
+.row {
+    margin-bottom: 20px;
+}
+.colum{
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+.images{
+    width: 50%;
+    margin-left: 25%;
+}
+.images img{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+}
+.fonts{
+    width: 70%;
+    margin-left: 15%;
+}
+/*.fp-slide1{*/
+    /*background: url("img/g1.jpg") no-repeat center;*/
+    /*background-size: cover;*/
+    /*-webkit-background-size: cover;*/
+    /*-o-background-size: cover;*/
+/*}*/
+/*.fp-slide2{*/
+    /*background: url("img/g2.png") no-repeat center;*/
+    /*background-size: cover;*/
+    /*-webkit-background-size: cover;*/
+    /*-o-background-size: cover;*/
+/*}*/
+/*.fp-slide3{*/
+    /*background: url("img/g3.jpg") no-repeat center;*/
+    /*background-size: cover;*/
+    /*-webkit-background-size: cover;*/
+    /*-o-background-size: cover;*/
+/*}*/
+#header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+}
+.head{
+    padding: 0;
+    height: 60px;
+    width: 75%;
+    position: absolute;
+    left: 12.5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.headright
+{
+   position: absolute;
+   right: 0;
+}
+.fp-slide1-c{
+    width: 300px;
+    text-align: center;
+    position: relative;
+    top: 7%;
+    left: 50%;
+    margin-left: -150px;
+}
+.fp-slide1-i{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: 7%;
+    margin-top: 700px;
+}
+.fp-slide1-i img{
+    width: 100%;
+}
